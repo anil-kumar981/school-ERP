@@ -1,0 +1,36 @@
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #f7f7f7;
+  color: rgb(59, 59, 59);
+  height: 100%;
+}
+
+.sidebar ul {
+  width: 100%;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.sidebar li {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.sidebar li:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li a:hover {
+  background-color: #000000;
+}
