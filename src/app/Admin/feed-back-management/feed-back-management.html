@@ -1,1 +1,175 @@
-<p>feed-back-management works!</p>
+<div class="dashboard">
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Feedback Management</h1>
+    <p>Manage and respond to feedback from all departments</p>
+  </header>
+
+  <!-- Statistics Cards -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">
+        <i class="fas fa-comments"></i>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Total Feedback</div>
+        <div class="stat-number">248</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon pending">
+        <i class="fas fa-clock"></i>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Pending Review</div>
+        <div class="stat-number">42</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon resolved">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Resolved</div>
+        <div class="stat-number">189</div>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon critical">
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+      <div class="stat-content">
+        <div class="stat-label">Critical</div>
+        <div class="stat-number">17</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="chart-section">
+    <div class="chart-container">
+      <h3>Feedback Distribution by Department</h3>
+
+      <div class="chart-content">
+        <div class="chart-legend">
+          <div class="legend-item">
+            <div class="legend-color teachers-color"></div>
+            <span>Teachers</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color students-color"></div>
+            <span>Students</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color librarians-color"></div>
+            <span>Librarians</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-color accountants-color"></div>
+            <span>Accountants</span>
+          </div>
+        </div>
+        <div class="chart-placeholder">
+          <div class="pie-chart">
+            <div class="slice teachers" style="--percentage: 45"></div>
+            <div class="slice students" style="--percentage: 35"></div>
+            <div class="slice librarians" style="--percentage: 12"></div>
+            <div class="slice accountants" style="--percentage: 8"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Feedback Section -->
+  <div class="feedback-section">
+    <div class="feedback-header">
+      <h3>Recent Feedback</h3>
+      <div class="feedback-controls">
+        <select class="department-filter">
+          <option>All Departments</option>
+          <option>Teachers</option>
+          <option>Students</option>
+          <option>Librarians</option>
+          <option>Accountants</option>
+        </select>
+        <button class="filter-btn"><i class="fas fa-filter"></i> Filter</button>
+        <button class="export-btn">
+          <i class="fas fa-download"></i> Export
+        </button>
+      </div>
+    </div>
+
+    <div class="feedback-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Subject</th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="sender-info">
+                <div class="avatar">
+                  <img
+                    src="/placeholder.svg?height=32&width=32"
+                    alt="Sarah Wilson"
+                  />
+                </div>
+                <div class="sender-details">
+                  <div class="sender-name">Sarah Wilson</div>
+                  <div class="sender-role">Teacher</div>
+                </div>
+              </div>
+            </td>
+            <td>Classroom Equipment Issue</td>
+            <td>Teaching Staff</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>2024-02-15</td>
+            <td>
+              <div class="actions">
+                <button class="action-btn view">View</button>
+                <button class="action-btn delete">Delete</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="sender-info">
+                <div class="avatar">
+                  <img
+                    src="/placeholder.svg?height=32&width=32"
+                    alt="John Smith"
+                  />
+                </div>
+                <div class="sender-details">
+                  <div class="sender-name">John Smith</div>
+                  <div class="sender-role">Student</div>
+                </div>
+              </div>
+            </td>
+            <td>Library Access Request</td>
+            <td>Student Affairs</td>
+            <td><span class="status resolved">Resolved</span></td>
+            <td>2024-02-14</td>
+            <td>
+              <div class="actions">
+                <button class="action-btn view">View</button>
+                <button class="action-btn delete">Delete</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

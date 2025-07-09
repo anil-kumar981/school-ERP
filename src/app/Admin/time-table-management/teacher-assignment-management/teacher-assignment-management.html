@@ -1,1 +1,214 @@
-<p>teacher-assignment-management works!</p>
+<div class="container">
+  <div class="header">
+    <h1>Teacher Assignment Management</h1>
+    <button class="new-assignment-btn">
+      <span>+</span>
+      New Assignment
+    </button>
+  </div>
+
+  <div class="filters">
+    <div class="filter-group">
+      <label for="department">Department</label>
+      <select id="department" class="filter-select">
+        <option>All Departments</option>
+        <option>Mathematics</option>
+        <option>Science</option>
+        <option>English</option>
+        <option>History</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="grade-level">Grade Level</label>
+      <select id="grade-level" class="filter-select">
+        <option>All Grades</option>
+        <option>Grade 7</option>
+        <option>Grade 8</option>
+        <option>Grade 9</option>
+        <option>Grade 10</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="subject-category">Subject Category</label>
+      <select id="subject-category" class="filter-select">
+        <option>All Categories</option>
+        <option>STEM</option>
+        <option>Liberal Arts</option>
+        <option>Physical Education</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="teacher-status">Teacher Status</label>
+      <select id="teacher-status" class="filter-select">
+        <option>All Status</option>
+        <option>Active</option>
+        <option>Inactive</option>
+        <option>On Leave</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Teacher</th>
+          <th>Subjects</th>
+          <th>Classes</th>
+          <th>Hours</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="teacher-info">
+              <img
+                src="/placeholder.svg?height=40&width=40"
+                alt="Sarah Wilson"
+                class="teacher-avatar"
+              />
+              <div class="teacher-details">
+                <h4>Sarah Wilson</h4>
+                <div class="teacher-id">ID: T001</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span class="subject-tag subject-mathematics">Mathematics</span>
+          </td>
+          <td>Grade 7A, 7B</td>
+          <td>24/week</td>
+          <td>
+            <span class="status-badge status-active">Active</span>
+          </td>
+          <td>
+            <div class="actions">
+              <button class="action-btn edit-btn" title="Edit">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  />
+                  <path d="m18.5 2.5 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                </svg>
+              </button>
+              <button class="action-btn delete-btn" title="Delete">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3,6 5,6 21,6" />
+                  <path
+                    d="m19,6v14a2,2 0 0,1 -2,2H7a2,2 0 0,1 -2,-2V6m3,0V4a2,2 0 0,1 2,-2h4a2,2 0 0,1 2,2v2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="teacher-info">
+              <img
+                src="/placeholder.svg?height=40&width=40"
+                alt="John Davis"
+                class="teacher-avatar"
+              />
+              <div class="teacher-details">
+                <h4>John Davis</h4>
+                <div class="teacher-id">ID: T002</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span class="subject-tag subject-science">Science</span>
+          </td>
+          <td>Grade 8A, 8B, 8C</td>
+          <td>30/week</td>
+          <td>
+            <span class="status-badge status-active">Active</span>
+          </td>
+          <td>
+            <div class="actions">
+              <button class="action-btn edit-btn" title="Edit">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  />
+                  <path d="m18.5 2.5 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                </svg>
+              </button>
+              <button class="action-btn delete-btn" title="Delete">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3,6 5,6 21,6" />
+                  <path
+                    d="m19,6v14a2,2 0 0,1 -2,2H7a2,2 0 0,1 -2,-2V6m3,0V4a2,2 0 0,1 2,2h4a2,2 0 0,1 2,2v2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <div class="pagination-info">Showing 1 to 2 of 20 results</div>
+    <div class="pagination-controls">
+      <button class="pagination-btn" disabled>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="15,18 9,12 15,6" />
+        </svg>
+      </button>
+      <button class="pagination-btn active">1</button>
+      <button class="pagination-btn">2</button>
+      <button class="pagination-btn">3</button>
+      <button class="pagination-btn">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="9,18 15,12 9,6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

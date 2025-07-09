@@ -1,1 +1,101 @@
-<p>report-analytics works!</p>
+<div class="dashboard">
+  <!-- Header Navigation -->
+  <header class="header">
+    <nav class="nav-tabs">
+      <button class="nav-tab active">Attendance</button>
+      <button class="nav-tab">Financial</button>
+      <button class="nav-tab">Library</button>
+      <button class="nav-tab">Leave</button>
+    </nav>
+    <div class="header-actions">
+      <button class="action-btn">
+        <span class="icon">📥</span>
+        Export
+      </button>
+      <button class="action-btn">
+        <span class="icon">🖨️</span>
+        Print
+      </button>
+    </div>
+  </header>
+
+  <!-- Statistics Cards -->
+  <section class="stats-grid">
+    <div class="stat-card">
+      <h3 class="stat-label">Total Students</h3>
+      <div class="stat-value">1,234</div>
+      <div class="stat-change positive">↗ +5.2%</div>
+    </div>
+    <div class="stat-card">
+      <h3 class="stat-label">Today's Attendance</h3>
+      <div class="stat-value">95.8%</div>
+      <div class="stat-change positive">↗ +2.1%</div>
+    </div>
+    <div class="stat-card">
+      <h3 class="stat-label">Fee Collection</h3>
+      <div class="stat-value">$52,680</div>
+      <div class="stat-change negative">↘ -1.4%</div>
+    </div>
+    <div class="stat-card">
+      <h3 class="stat-label">Library Usage</h3>
+      <div class="stat-value">428</div>
+      <div class="stat-change positive">↗ +12.3%</div>
+    </div>
+  </section>
+
+  <!-- Charts Section -->
+  <section class="charts-section">
+    <!-- Attendance Trend -->
+    <div class="chart-container">
+      <h3 class="chart-title">Attendance Trend</h3>
+      <canvas id="attendanceChart"></canvas>
+    </div>
+
+    <!-- Fee Collection Status -->
+    <div class="chart-container">
+      <h3 class="chart-title">Fee Collection Status</h3>
+      <canvas id="feeChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Recent Reports Table -->
+  <section class="reports-section">
+    <h3 class="section-title">Recent Reports</h3>
+    <div class="table-container">
+      <table class="reports-table">
+        <thead>
+          <tr>
+            <th>Report Name</th>
+            <th>Generated Date</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monthly Attendance Report</td>
+            <td>Oct 1, 2023</td>
+            <td>Attendance</td>
+            <td><span class="status-badge completed">Completed</span></td>
+            <td><button class="download-btn">⬇</button></td>
+          </tr>
+          <tr>
+            <td>Fee Collection Summary</td>
+            <td>Sep 30, 2023</td>
+            <td>Financial</td>
+            <td><span class="status-badge completed">Completed</span></td>
+            <td><button class="download-btn">⬇</button></td>
+          </tr>
+          <tr>
+            <td>Library Usage Report</td>
+            <td>Sep 29, 2023</td>
+            <td>Library</td>
+            <td><span class="status-badge completed">Completed</span></td>
+            <td><button class="download-btn">⬇</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>

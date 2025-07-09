@@ -1,1 +1,155 @@
-<p>fees works!</p>
+<div class="container">
+  <div class="fees-dashboard">
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+      <div class="card">
+        <div class="card-content">
+          <div>
+            <p class="label">Total Collected</p>
+            <h2>$245,890</h2>
+            <p class="change up">▲ 12% from last month</p>
+          </div>
+          <div class="icon-circle blue">
+            <ng-icon name="lucideDollarSign" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div>
+            <p class="label">Pending Amount</p>
+            <h2>$32,450</h2>
+            <p class="change orange">▲ 5% from last month</p>
+          </div>
+          <div class="icon-circle orange-bg">
+            <ng-icon name="lucideAlarmClock" />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div>
+            <p class="label">Overdue Amount</p>
+            <h2>$12,890</h2>
+            <p class="change down">▼ 3% from last month</p>
+          </div>
+          <div class="icon-circle red-bg">
+            <span>❗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div>
+            <p class="label">Total Students</p>
+            <h2>1,234</h2>
+            <p class="change up">▲ 8% from last month</p>
+          </div>
+          <div class="icon-circle green-bg">
+            <ng-icon name="lucideUsers" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-section">
+      <div class="chart-header">
+        <h3 class="section-title">Fee Collection Analysis</h3>
+        <div class="chart-controls">
+          <button class="chart-btn">All Classes</button>
+          <button class="chart-btn">2023-24</button>
+          <button class="export-btn">⬇ Export</button>
+        </div>
+      </div>
+
+      <div class="charts">
+        <!-- Left Pie Chart Box -->
+        <div class="chart-box">
+          <div class="chart-header">
+            <h4 class="chart-title">Fee Collection Distribution</h4>
+          </div>
+          <div style="margin-left: 70px; height: 100%; width: 300px">
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Right Bar Chart Box -->
+        <div class="chart-box">
+          <div class="chart-header">
+            <h4 class="chart-title">Monthly Fee Collection</h4>
+          </div>
+          <div style="margin-top: 70px; height: 300px; width: 100%">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="transactions">
+      <div class="table-header">
+        <h3>Recent Transactions</h3>
+        <div class="table-search">
+          <input type="text" placeholder="Search..." />
+          <button>🔍 Filter</button>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr style="text-align: left">
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Fee Type</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>STD001</td>
+            <td>Alice Johnson</td>
+            <td>Class 10A</td>
+            <td>Tuition Fee</td>
+            <td>$1,200</td>
+            <td class="paid">Paid</td>
+            <td>2024-02-15</td>
+          </tr>
+          <tr>
+            <td>STD002</td>
+            <td>Bob Smith</td>
+            <td>Class 9B</td>
+            <td>Library Fee</td>
+            <td>$150</td>
+            <td class="pending">Pending</td>
+            <td>2024-02-14</td>
+          </tr>
+          <tr>
+            <td>STD003</td>
+            <td>Carol White</td>
+            <td>Class 11C</td>
+            <td>Lab Fee</td>
+            <td>$300</td>
+            <td class="overdue">Overdue</td>
+            <td>2024-02-13</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination">
+        <span>Showing 1 to 3 of 100 entries</span>
+        <div>
+          <button>Previous</button>
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

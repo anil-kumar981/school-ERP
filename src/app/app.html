@@ -1,2 +1,5 @@
-<app-common-header></app-common-header>
-<router-outlet></router-outlet>
+<app-common-header [pageTitle]="pageState.pageTitle()"></app-common-header>
+<div style="display: flex">
+  <app-common-component></app-common-component>
+  <router-outlet></router-outlet>
+</div>

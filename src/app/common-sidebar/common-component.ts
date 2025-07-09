@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
@@ -50,4 +50,10 @@ import {
   templateUrl: './common-component.html',
   styleUrl: './common-component.css',
 })
-export class CommonComponent {}
+export class CommonComponent {
+  pageTitle = input<string>('');
+  passingData = output<string>();
+  PassData() {
+    this.passingData.emit(this.pageTitle());
+  }
+}

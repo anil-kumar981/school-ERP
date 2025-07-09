@@ -13,7 +13,8 @@ export const routes: Routes = [
   },
   {
     path: 'admin/fees',
-    loadComponent: () => import('./Admin/fees/fees').then((m) => m.Fees),
+    loadComponent: () =>
+      import('./Admin/fees/fees').then((m) => m.FeesComponent),
   },
   {
     path: 'admin/library',
@@ -44,6 +45,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'teacher-assignment',
+    loadComponent: () =>
+      import(
+        './Admin/time-table-management/teacher-assignment-management/teacher-assignment-management'
+      ).then((m) => m.TeacherAssignmentManagement),
+  },
+  {
     path: 'admin/teacher-assignment',
     loadComponent: () =>
       import(
@@ -56,5 +64,15 @@ export const routes: Routes = [
       import('./Admin/report-analytics/report-analytics').then(
         (m) => m.ReportAnalytics
       ),
+  },
+  {
+    path: 'admin/settings',
+    loadComponent: () =>
+      import('./Admin/settings/settings').then((m) => m.Settings),
+  },
+  {
+    path: 'admin/add-user',
+    loadComponent: () =>
+      import('./Admin/add-user/add-user').then((m) => m.AddUser),
   },
 ];

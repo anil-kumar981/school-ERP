@@ -1,1 +1,70 @@
-<app-common-header></app-common-header> <app-common-component />
+<div class="container">
+  <div class="dashboard-container">
+    <div class="stats-cards">
+      <div class="card blue">Total Students<br /><span>245</span></div>
+      <div class="card green">Present Today<br /><span>228</span></div>
+      <div class="card red">Absent Today<br /><span>17</span></div>
+      <div class="card purple">Attendance Rate<br /><span>93.1%</span></div>
+    </div>
+
+    <div class="filters">
+      <input type="date" />
+      <select>
+        <option>All Classes</option>
+      </select>
+      <input type="text" placeholder="Search student..." />
+      <button class="apply-button">Apply Filters</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Class</th>
+          <th>Status</th>
+          <th>Check-in Time</th>
+          <th>Attendance %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>STU001</td>
+          <td>Alice Johnson</td>
+          <td>Class 9A</td>
+          <td><span class="badge green">Present</span></td>
+          <td>8:30 AM</td>
+          <td>98%</td>
+        </tr>
+        <tr>
+          <td>STU002</td>
+          <td>Bob Smith</td>
+          <td>Class 9A</td>
+          <td><span class="badge yellow">Late</span></td>
+          <td>9:15 AM</td>
+          <td>85%</td>
+        </tr>
+        <tr>
+          <td>STU003</td>
+          <td>Charlie Brown</td>
+          <td>Class 9A</td>
+          <td><span class="badge red">Absent</span></td>
+          <td>-</td>
+          <td>92%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <div class="legend">
+        <span class="dot green"></span> Present
+        <span class="dot yellow"></span> Late
+        <span class="dot red"></span> Absent
+      </div>
+      <div class="export-buttons">
+        <button><i class="fa fa-file-excel-o"></i> Export Excel</button>
+        <button><i class="fa fa-file-pdf-o"></i> Download PDF</button>
+      </div>
+    </div>
+  </div>
+</div>

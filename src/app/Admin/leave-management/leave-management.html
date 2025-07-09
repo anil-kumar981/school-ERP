@@ -1,1 +1,106 @@
-<p>leave-management works!</p>
+<div class="leave-dashboard">
+  <!-- Summary Cards -->
+  <div class="summary-cards">
+    <div class="card">
+      <div class="icon blue">🕒</div>
+      <div>
+        <p>Pending Requests</p>
+        <h2>12</h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon green">✔️</div>
+      <div>
+        <p>Approved Today</p>
+        <h2>8</h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon red">❌</div>
+      <div>
+        <p>Rejected Today</p>
+        <h2>3</h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class="icon purple">📅</div>
+      <div>
+        <p>Total Requests</p>
+        <h2>245</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter + Export -->
+  <div class="controls">
+    <input type="text" placeholder="🔍 Search..." />
+    <select>
+      <option>All Roles</option>
+      <option>English Teacher</option>
+      <option>Math Teacher</option>
+    </select>
+    <select>
+      <option>All Status</option>
+      <option>Pending</option>
+      <option>Approved</option>
+      <option>Rejected</option>
+    </select>
+    <button class="export-btn">⬇ Export</button>
+  </div>
+
+  <!-- Table -->
+  <table class="leave-table">
+    <thead>
+      <tr>
+        <th>Employee</th>
+        <th>Leave Type</th>
+        <th>Date Range</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="profile-cell">
+          <img src="https://i.pravatar.cc/40?img=47" alt="Sarah" />
+          <div>
+            <strong>Sarah Wilson</strong><br />
+            <small>English Teacher</small>
+          </div>
+        </td>
+        <td><span class="tag green">Sick Leave</span></td>
+        <td>Mar 15, 2024 - Mar 17, 2024</td>
+        <td><span class="status pending">Pending</span></td>
+        <td>
+          <button class="btn green">Approve</button>
+          <button class="btn red">Reject</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="profile-cell">
+          <img src="https://i.pravatar.cc/40?img=52" alt="Michael" />
+          <div>
+            <strong>Michael Brown</strong><br />
+            <small>Math Teacher</small>
+          </div>
+        </td>
+        <td><span class="tag blue">Personal Leave</span></td>
+        <td>Mar 20, 2024</td>
+        <td><span class="status pending">Pending</span></td>
+        <td>
+          <button class="btn green">Approve</button>
+          <button class="btn red">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <span>Showing 1 to 10 of 20 results</span>
+    <div>
+      <button>Previous</button>
+      <button>Next</button>
+    </div>
+  </div>
+</div>

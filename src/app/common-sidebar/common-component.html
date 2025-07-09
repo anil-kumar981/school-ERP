@@ -2,7 +2,12 @@
   <ul>
     <li>
       <ng-icon name="lucideChartLine" />
-      <a [routerLink]="'/'" routerLinkActive="router-link-active">Dashboard</a>
+      <a
+        [routerLink]="'/'"
+        routerLinkActive="router-link-active"
+        (click)="PassData()"
+        >Dashboard</a
+      >
     </li>
     <li>
       <ng-icon name="lucideUser" />

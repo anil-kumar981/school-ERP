@@ -1,1 +1,128 @@
-<p>library-management works!</p>
+<div class="dashboard-container">
+  <!-- Summary Cards -->
+  <div class="summary-cards">
+    <div class="card blue">
+      <div class="icon">📚</div>
+      <div class="card-data">
+        <p>Total Books</p>
+        <h2>12,458</h2>
+      </div>
+    </div>
+    <div class="card green">
+      <div class="icon">📗</div>
+      <div class="card-data">
+        <p>Books Issued</p>
+        <h2>1,245</h2>
+      </div>
+    </div>
+    <div class="card yellow">
+      <div class="icon">⏰</div>
+      <div class="card-data">
+        <p>Overdue Returns</p>
+        <h2>48</h2>
+      </div>
+    </div>
+    <div class="card red">
+      <div class="icon">$</div>
+      <div class="card-data">
+        <p>Pending Fines</p>
+        <h2 style="margin: 0px">$892</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Inventory -->
+  <div class="inventory">
+    <h3>Book Inventory</h3>
+    <div class="inventory-header">
+      <input type="text" placeholder="🔍 Search books..." />
+      <button class="category-btn">All Categories ⬇</button>
+      <button class="add-btn">+ Add New Book</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Book Title</th>
+          <th>Author</th>
+          <th>ISBN</th>
+          <th>Category</th>
+          <th>Available</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The Great Gatsby</td>
+          <td>F. Scott Fitzgerald</td>
+          <td>978-0743273565</td>
+          <td>Fiction</td>
+          <td><span class="tag green">5 copies</span></td>
+          <td><span class="actions">✏️ 🗑️</span></td>
+        </tr>
+        <tr>
+          <td>1984</td>
+          <td>George Orwell</td>
+          <td>978-0451524935</td>
+          <td>Fiction</td>
+          <td><span class="tag yellow">2 copies</span></td>
+          <td><span class="actions">✏️ 🗑️</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <span>Showing 1 to 2 of 100 entries</span>
+      <div>
+        <button>Previous</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activities + Overdue Books -->
+  <div class="activities-section">
+    <div class="recent-activities">
+      <h4>Recent Activities</h4>
+      <div class="activity">
+        <div class="icon blue">📘</div>
+        <div>
+          <strong>Book Issued</strong><br />
+          “To Kill a Mockingbird” issued to John Smith<br />
+          <small>2 minutes ago</small>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="icon green">↩️</div>
+        <div>
+          <strong>Book Returned</strong><br />
+          “Pride and Prejudice” returned by Emma Wilson<br />
+          <small>1 hour ago</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="overdue-books">
+      <h4>Overdue Books</h4>
+      <div class="overdue">
+        <div class="icon red">❗</div>
+        <div>
+          <strong>Michael Brown</strong><br />
+          “The Catcher in the Rye” – 5 days overdue<br />
+          <span class="fine">Fine: $2.50</span>
+        </div>
+      </div>
+      <div class="overdue">
+        <div class="icon red">❗</div>
+        <div>
+          <strong>Sarah Davis</strong><br />
+          “Lord of the Flies” – 3 days overdue<br />
+          <span class="fine">Fine: $1.50</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

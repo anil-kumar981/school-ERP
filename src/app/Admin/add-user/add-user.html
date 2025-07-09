@@ -1,0 +1,166 @@
+<div class="container">
+  <form class="registration-form">
+    <!-- Role Selection -->
+    <div class="form-group full-width">
+      <label for="role">Role</label>
+      <select id="role" name="role" required>
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+        <option value="accountant">Accountant</option>
+        <option value="librarian">Librarian</option>
+      </select>
+    </div>
+
+    <!-- Name Fields -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required />
+      </div>
+    </div>
+
+    <!-- Email and Password -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+    </div>
+
+    <!-- Phone and Date of Birth -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" placeholder="-/-/-" required />
+      </div>
+    </div>
+
+    <!-- Gender -->
+    <div class="form-group full-width">
+      <label class="gender-label">Gender</label>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="gender" value="male" required />
+          <span class="radio-text">Male</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="gender" value="female" required />
+          <span class="radio-text">Female</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div class="form-group full-width">
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="4" required></textarea>
+    </div>
+
+    <!-- Profile Picture -->
+    <div class="form-group full-width">
+      <label class="upload-label">Profile Picture</label>
+      <div class="upload-area">
+        <div class="upload-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7,10 12,15 17,10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+        </div>
+        <div class="upload-text">
+          <span class="upload-main">Upload a file</span>
+          <span class="upload-sub">or drag and drop</span>
+          <span class="upload-format">PNG, JPG, GIF up to 10MB</span>
+        </div>
+        <input
+          type="file"
+          id="profilePicture"
+          name="profilePicture"
+          accept="image/*"
+          hidden
+        />
+      </div>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="emergencyName">Emergency Contact Name</label>
+        <input type="text" id="emergencyName" name="emergencyName" required />
+      </div>
+      <div class="form-group">
+        <label for="emergencyNumber">Emergency Contact Number</label>
+        <input
+          type="tel"
+          id="emergencyNumber"
+          name="emergencyNumber"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- Admission Details -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="admissionNumber">Admission Number</label>
+        <input
+          type="text"
+          id="admissionNumber"
+          name="admissionNumber"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="admissionDate">Admission Date</label>
+        <input
+          type="date"
+          id="admissionDate"
+          name="admissionDate"
+          placeholder="-/-/-"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- Roll Number, Parent Details -->
+    <div class="form-row three-columns">
+      <div class="form-group">
+        <label for="rollNumber">Roll Number</label>
+        <input type="text" id="rollNumber" name="rollNumber" required />
+      </div>
+      <div class="form-group">
+        <label for="parentName">Parent Name</label>
+        <input type="text" id="parentName" name="parentName" required />
+      </div>
+      <div class="form-group">
+        <label for="parentContact">Parent Contact</label>
+        <input type="tel" id="parentContact" name="parentContact" required />
+      </div>
+    </div>
+
+    <!-- Form Actions -->
+    <div class="form-actions">
+      <button type="button" class="btn-clear">Clear Form</button>
+      <button type="submit" class="btn-save">Save User</button>
+    </div>
+  </form>
+</div>

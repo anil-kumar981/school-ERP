@@ -1,154 +1,148 @@
-<body>
-  <div class="container">
-    <!-- Sidebar -->
-    <app-common-component />
+<div class="container">
+  <!-- Sidebar -->
+  <!-- Main content -->
+  <main class="main">
+    <section class="cards">
+      <div class="card">
+        <div class="card-icon">
+          <ng-icon name="lucideUsersRound" />
+        </div>
+        <div class="card-content">
+          Teachers
+          <strong>124</strong>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          class="card-icon"
+          style="background-color: #dcfce7; color: #16a34a"
+        >
+          <ng-icon name="lucideGraduationCap" />
+        </div>
+        <div class="card-content">
+          Student
+          <strong>1892</strong>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          class="card-icon"
+          style="background-color: #fef9c3; color: #ca8a04"
+        >
+          <ng-icon name="lucideBookOpen" />
+        </div>
+        <div class="card-content">
+          Libraian
+          <strong>8</strong>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          class="card-icon"
+          style="background-color: #fee2e2; color: #ef4444"
+        >
+          <ng-icon name="lucideCalculator" />
+        </div>
+        <div class="card-content">
+          ACcountents
+          <strong>12</strong>
+        </div>
+      </div>
+    </section>
 
-    <!-- Main content -->
-    <main class="main">
-      <section class="cards">
-        <div class="card">
-          <div class="card-icon">
-            <ng-icon name="lucideUsersRound" />
-          </div>
-          <div class="card-content">
-            Teachers
-            <strong>124</strong>
-          </div>
+    <section class="charts">
+      <div class="chart-box">
+        <h3>Attendance Overview</h3>
+        <div style="display: flex; align-items: end; height: 100%">
+          <canvas #attendanceChart></canvas>
         </div>
-        <div class="card">
-          <div
-            class="card-icon"
-            style="background-color: #dcfce7; color: #16a34a"
-          >
-            <ng-icon name="lucideGraduationCap" />
-          </div>
-          <div class="card-content">
-            Student
-            <strong>1892</strong>
-          </div>
+      </div>
+      <div class="chart-box">
+        <h3>Fee Collection Status</h3>
+        <div
+          class="pie-chart"
+          style="
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <canvas #feeChart></canvas>
         </div>
-        <div class="card">
-          <div
-            class="card-icon"
-            style="background-color: #fef9c3; color: #ca8a04"
-          >
-            <ng-icon name="lucideBookOpen" />
-          </div>
-          <div class="card-content">
-            Libraian
-            <strong>8</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div
-            class="card-icon"
-            style="background-color: #fee2e2; color: #ef4444"
-          >
-            <ng-icon name="lucideCalculator" />
-          </div>
-          <div class="card-content">
-            ACcountents
-            <strong>12</strong>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="charts">
-        <div class="chart-box">
-          <h3>Attendance Overview</h3>
-          <div style="display: flex; align-items: end; height: 100%">
-            <canvas #attendanceChart></canvas>
-          </div>
-        </div>
-        <div class="chart-box">
-          <h3>Fee Collection Status</h3>
-          <div
-            class="pie-chart"
-            style="
-              height: 250px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            "
-          >
-            <canvas #feeChart></canvas>
-          </div>
-        </div>
-      </section>
-
-      <section class="activities">
-        <div class="activity-card">
-          <h3>Recent Activities</h3>
-          <ul class="activity-list">
-            <li class="activity-item">
-              <div class="activity-icon"><ng-icon name="lucideUserPlus" /></div>
-              <div class="activity-content">
-                <strong>New student admission</strong>
-                <div>Sarah Johnson - Grade 10</div>
-                <span class="timestamp">2 hours ago</span>
+    <section class="activities">
+      <div class="activity-card">
+        <h3>Recent Activities</h3>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <div class="activity-icon"><ng-icon name="lucideUserPlus" /></div>
+            <div class="activity-content">
+              <strong>New student admission</strong>
+              <div>Sarah Johnson - Grade 10</div>
+              <span class="timestamp">2 hours ago</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <div class="activity-icon" style="color: green">
+              <ng-icon name="lucideDollarSign" />
+            </div>
+            <div class="activity-content">
+              <strong>Fee payment received</strong>
+              <div>Michael Brown - Grade 8</div>
+              <span class="timestamp">4 hours ago</span>
+            </div>
+          </li>
+          <li class="activity-item">
+            <div class="activity-icon" style="color: #3f51b5">
+              <ng-icon name="lucideCheck" />
+            </div>
+            <div class="activity-content">
+              <strong>Leave request approved</strong>
+              <div>Ms. Emily Davis - English Teacher</div>
+              <span class="timestamp">6 hours ago</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="approval-card">
+        <h3>Pending Approvals</h3>
+        <ul class="approval-list">
+          <li class="approval-item">
+            <div class="approval-info">
+              <div class="approval-icon" style="color: #fbc02d">
+                <ng-icon name="lucideAlarmClock" />
               </div>
-            </li>
-            <li class="activity-item">
-              <div class="activity-icon" style="color: green">
+              <div>
+                <strong>Leave Request</strong><br />
+                <span>From: Robert Wilson</span>
+              </div>
+            </div>
+            <div class="approval-actions">
+              <button class="approve-btn">Approve</button>
+              <button class="reject-btn">Reject</button>
+            </div>
+          </li>
+
+          <li class="approval-item">
+            <div class="approval-info">
+              <div class="approval-icon" style="color: green">
                 <ng-icon name="lucideDollarSign" />
               </div>
-              <div class="activity-content">
-                <strong>Fee payment received</strong>
-                <div>Michael Brown - Grade 8</div>
-                <span class="timestamp">4 hours ago</span>
+              <div>
+                <strong>Fee Concession</strong><br />
+                <span>For: Amanda Thompson</span>
               </div>
-            </li>
-            <li class="activity-item">
-              <div class="activity-icon" style="color: #3f51b5">
-                <ng-icon name="lucideCheck" />
-              </div>
-              <div class="activity-content">
-                <strong>Leave request approved</strong>
-                <div>Ms. Emily Davis - English Teacher</div>
-                <span class="timestamp">6 hours ago</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="approval-card">
-          <h3>Pending Approvals</h3>
-          <ul class="approval-list">
-            <li class="approval-item">
-              <div class="approval-info">
-                <div class="approval-icon" style="color: #fbc02d">
-                  <ng-icon name="lucideAlarmClock" />
-                </div>
-                <div>
-                  <strong>Leave Request</strong><br />
-                  <span>From: Robert Wilson</span>
-                </div>
-              </div>
-              <div class="approval-actions">
-                <button class="approve-btn">Approve</button>
-                <button class="reject-btn">Reject</button>
-              </div>
-            </li>
-
-            <li class="approval-item">
-              <div class="approval-info">
-                <div class="approval-icon" style="color: green">
-                  <ng-icon name="lucideDollarSign" />
-                </div>
-                <div>
-                  <strong>Fee Concession</strong><br />
-                  <span>For: Amanda Thompson</span>
-                </div>
-              </div>
-              <div class="approval-actions">
-                <button class="approve-btn">Approve</button>
-                <button class="reject-btn">Reject</button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+            </div>
+            <div class="approval-actions">
+              <button class="approve-btn">Approve</button>
+              <button class="reject-btn">Reject</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>

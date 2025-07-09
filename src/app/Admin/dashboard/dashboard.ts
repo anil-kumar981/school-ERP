@@ -1,4 +1,12 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  output,
+  inject,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Chart, registerables } from 'chart.js';
 
@@ -23,7 +31,8 @@ import {
   lucideSettings,
   lucideRepeat,
 } from '@ng-icons/lucide';
-import { CommonComponent } from '../common-component/common-component';
+import { CommonComponent } from '../../common-sidebar/common-component';
+import { PageServiceAdmin } from '../../services/pageServiceAdmin';
 
 // Register Chart.js globally
 Chart.register(...registerables);
@@ -31,7 +40,7 @@ Chart.register(...registerables);
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NgIcon, CommonComponent],
+  imports: [NgIcon],
   viewProviders: [
     provideIcons({
       lucideBookOpen,
@@ -57,7 +66,12 @@ Chart.register(...registerables);
   templateUrl: './dashboard.html',
   styleUrls: ['./dashboard.css'],
 })
-export class Dashboard implements AfterViewInit {
+export class Dashboard implements OnInit, AfterViewInit {
+  private pageServiceAdmin = inject(PageServiceAdmin);
+  ngOnInit(): void {
+    this.pageServiceAdmin.pageTitle.set('Dashboard');
+  }
+
   @ViewChild('attendanceChart') attendanceChartRef!: ElementRef;
   @ViewChild('feeChart') feeChartRef!: ElementRef;
 

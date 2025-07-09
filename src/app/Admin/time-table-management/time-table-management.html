@@ -1,1 +1,142 @@
-<p>time-table-management works!</p>
+<div class="main-content">
+  <div class="timetable-section">
+    <div class="controls">
+      <div class="filters">
+        <select class="filter-select">
+          <option>2023-2024</option>
+        </select>
+        <select class="filter-select">
+          <option>Grade 10</option>
+        </select>
+        <select class="filter-select">
+          <option>Section A</option>
+        </select>
+      </div>
+      <div class="actions">
+        <a routerLink="/teacher-assignment" style="text-decoration: none">
+          <button class="btn btn-primary"><span>+</span> New Schedule</button>
+        </a>
+        <button class="btn btn-secondary"><span>↓</span> Export</button>
+      </div>
+    </div>
+
+    <div class="timetable-grid">
+      <div class="grid-header">
+        <div class="grid-cell">Time</div>
+        <div class="grid-cell">Monday</div>
+        <div class="grid-cell">Tuesday</div>
+        <div class="grid-cell">Wednesday</div>
+        <div class="grid-cell">Thursday</div>
+        <div class="grid-cell">Friday</div>
+      </div>
+
+      <div class="grid-row">
+        <div class="time-cell">8:00 - 9:00</div>
+        <div class="subject-cell">
+          <div class="subject-card mathematics">
+            <div class="subject-name">Mathematics</div>
+            <div class="teacher-name">Mr. Johnson</div>
+            <div class="room-number">Room 101</div>
+          </div>
+        </div>
+        <div class="subject-cell">
+          <div class="subject-card physics">
+            <div class="subject-name">Physics</div>
+            <div class="teacher-name">Mrs. Smith</div>
+            <div class="room-number">Room 102</div>
+          </div>
+        </div>
+        <div class="subject-cell">
+          <div class="subject-card chemistry">
+            <div class="subject-name">Chemistry</div>
+            <div class="teacher-name">Mr. Davis</div>
+            <div class="room-number">Lab 201</div>
+          </div>
+        </div>
+        <div class="subject-cell">
+          <div class="subject-card english">
+            <div class="subject-name">English</div>
+            <div class="teacher-name">Ms. Wilson</div>
+            <div class="room-number">Room 103</div>
+          </div>
+        </div>
+        <div class="subject-cell">
+          <div class="subject-card history">
+            <div class="subject-name">History</div>
+            <div class="teacher-name">Mr. Brown</div>
+            <div class="room-number">Room 104</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="time-cell">9:00 - 10:00</div>
+        <div class="subject-cell"></div>
+        <div class="subject-cell"></div>
+        <div class="subject-cell"></div>
+        <div class="subject-cell"></div>
+        <div class="subject-cell"></div>
+      </div>
+    </div>
+
+    <div class="bottom-controls">
+      <div class="control-buttons">
+        <button class="control-btn"><span>📋</span> Copy Schedule</button>
+        <button class="control-btn"><span>✓</span> Clear Selection</button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 15px">
+        <div class="save-info">Last saved: 2 minutes ago</div>
+        <button class="btn btn-save">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="resources-sidebar">
+    <h2 class="resources-title">Resources</h2>
+
+    <div class="resource-section">
+      <h3>Subjects</h3>
+      <div class="resource-item">
+        <div class="resource-name">Mathematics</div>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Physics</div>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Chemistry</div>
+      </div>
+    </div>
+
+    <div class="resource-section">
+      <h3>Teachers</h3>
+      <div class="resource-item">
+        <div class="resource-name">Mr. Johnson</div>
+        <div class="resource-detail">Mathematics</div>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Mrs. Smith</div>
+        <div class="resource-detail">Physics</div>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Mr. Davis</div>
+        <div class="resource-detail">Chemistry</div>
+      </div>
+    </div>
+
+    <div class="resource-section">
+      <h3>Rooms</h3>
+      <div class="resource-item">
+        <div class="resource-name">Room 101</div>
+        <div class="resource-detail">Capacity: 30</div>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Room 102</div>
+        <div class="resource-detail">Capacity: 35</div>
+      </div>
+      <div class="resource-item">
+        <div class="resource-name">Lab 201</div>
+        <div class="resource-detail">Capacity: 25</div>
+      </div>
+    </div>
+  </div>
+</div>
